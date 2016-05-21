@@ -1,0 +1,63 @@
+<ion-view view-title="商户" name="login-view">
+  <ion-nav-bar class="bar-positive">
+  </ion-nav-bar>
+  <ion-content class="padding">
+      <textarea >请输入条码最后四位</textarea>
+    <label class="item item-input">
+      <input type="tel" ng-model="goods.codeName" maxlength="4" ng-change="queryGoodsCode()">
+      <i class="icon ion-close-circled" style="font-size:30px" on-tap="doClearGoodCode()" ng-if="goods.codeName"></i>
+    </label>
+    <div class="button-bar bar-positive" >
+      <button class="button">原价位{{selectedCodeInfo.price1}}</button>
+      <button class="button">建议价位{{selectedCodeInfo.price2}}</button>
+      <button class="button">固定价位{{selectedCodeInfo.price3}}</button>
+    </div>
+    <textarea  cols="50">点击下面条码或点击添加新商品</textarea>
+    <label class="item item-input item-select" style="padding-left:20px">
+      <div class="input-label">
+        商品条码
+      </div>
+      <select ng-model="selectedCode" ng-options="code as code.label for code in barCodes" ng-change="func(selectedCode)">
+        <option value="">请选择...</option>
+      </select>
+    </label>
+    <textarea>更新价位</textarea>
+    <label class="item item-input">
+      <input type="tel" ng-model="selectedCodeInfo.updatePrice" maxlength="4">
+      <i class="icon ion-close-circled" style="font-size:30px" on-tap="doClearGoodCode()" ng-if="selectedCodeInfo.updatePrice"></i>
+    </label>
+    <div class="button-bar bar-positive" >
+      <button class="button" ng-click="addIVA()">+IVA</button>
+      <button class="button" ng-click="addPercentage1()">+10%</button>
+      <button class="button" ng-click="addPercentage2()">+5%</button>
+      <button class="button" ng-click="zero()">.00</button>
+    </div>
+    <p></p>
+    <div class="button-bar bar-positive" >
+      <button class="button" ng-click="reduceIVA()">-IVA</button>
+      <button class="button" ng-click="reducePercentage1()">-10%</button>
+      <button class="button" ng-click="reducePercentage2()">-5%</button>
+      <button class="button" ng-click="zero1()">0.50</button>
+    </div>
+    <ion-list>
+    <ion-item>
+    <span>商品条码</span>
+    </ion-item>
+      <ion-item>
+          <span >商品名称</span>
+      </ion-item>
+    </ion-list>
+    <!--<ion-list>-->
+      <!--<ion-item ng-repeat="barcode in barcodes">-->
+        <!--<span ng-click="doAdd(barcode)">{{barcode}}</span>-->
+      <!--</ion-item>-->
+    <!--</ion-list>-->
+    <button class="button button-block button-balanced">
+      保存
+    </button>
+    <button class="button button-block button-calm" ng-click="addGoods()">
+      添加
+    </button>
+  </ion-content>
+</ion-view>
+

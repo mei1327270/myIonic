@@ -1,0 +1,10 @@
+{
+  "name": "supnuevo",
+  "app_id": "",
+  "proxies": [
+      {
+        "path": "/struts2",
+        "proxyUrl": "http://localhost:8080/struts2"
+      }
+    ]
+}

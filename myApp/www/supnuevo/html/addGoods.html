@@ -1,0 +1,52 @@
+<ion-view view-title="supnuevo" name="login-view">
+  <ion-nav-bar class="bar-positive">
+  </ion-nav-bar>
+  <ion-content class="padding">
+    <label class="item item-input">
+      <span class="input-label" >商品内码</span>
+      <input type="text" ng-model="user.username">
+      </label>
+    <label class="item item-input">
+      <span class="input-label" >商品条码</span>
+      <input type="text" ng-model="user.username">
+    </label>
+    <label class="item item-input">
+      <span class="input-label" >商品名称</span>
+      <input type="text" ng-model="user.username">
+    </label>
+    <label class="item item-input">
+      <span class="input-label" >商品含量</span>
+      <input type="text" ng-model="user.username">
+    </label>
+    <label class="item item-input">
+      <span class="input-label" >含量单位</span>
+      <select >
+        <option>
+          请选择
+        </option>
+      </select>
+    </label>
+    <label class="item item-input">
+      <span class="input-label" >比价单位</span>
+      <select >
+        <option>
+          请选择
+        </option>
+      </select>
+    </label>
+    <label class="item item-input">
+      <span class="input-label" >商品税类</span>
+      <select >
+        <option>
+          请选择
+        </option>
+      </select>
+    </label>
+    <button class="button button-block button-calm" ng-click="goQuery()">
+      确认
+    </button>
+    <button class="button button-block button-assertive" ng-click="goBack()">
+      返回
+    </button>
+  </ion-content>
+</ion-view>

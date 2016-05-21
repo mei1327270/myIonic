@@ -1,0 +1,12 @@
+angular.module('app',[])
+    .factory("Data",function(){
+        return{
+            msg:"我来自factory"
+        }
+    })
+.controller('FCtrl',function($scope,Data){
+        $scope.Data=Data;
+    })
+    .controller('SCtrl',function($scope,Data){
+        $scope.Data=Data;
+    })
